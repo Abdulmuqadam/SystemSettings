@@ -3367,11 +3367,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Complete Web development turtorial\\csharp\\SystemSetting Module\\SystemSetting\\SystemSetting.csproj",
+      "projectUniqueName": "F:\\Complete Web development turtorial\\csharp\\SystemSetting Module\\SystemSettings\\SystemSetting\\SystemSetting.csproj",
       "projectName": "SystemSetting",
-      "projectPath": "F:\\Complete Web development turtorial\\csharp\\SystemSetting Module\\SystemSetting\\SystemSetting.csproj",
+      "projectPath": "F:\\Complete Web development turtorial\\csharp\\SystemSetting Module\\SystemSettings\\SystemSetting\\SystemSetting.csproj",
       "packagesPath": "C:\\Users\\abdul\\.nuget\\packages\\",
-      "outputPath": "F:\\Complete Web development turtorial\\csharp\\SystemSetting Module\\SystemSetting\\obj\\",
+      "outputPath": "F:\\Complete Web development turtorial\\csharp\\SystemSetting Module\\SystemSettings\\SystemSetting\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\abdul\\AppData\\Roaming\\NuGet\\NuGet.Config",

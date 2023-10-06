@@ -1,0 +1,47 @@
+<div class="container">
+  <form>
+    <div class="row g-3">
+      <div class="col">
+        <label for="inputEmail4" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputEmail4"
+          ng-model="config.Name"
+        />
+      </div>
+      <div class="col">
+        <label for="inputEmail3" class="form-label">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputEmail3"
+          ng-model="config.Description"
+        />
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col">
+        <label for="inputEmail2" class="form-label">Phone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputEmail2"
+          ng-model="config.Phone"
+        />
+      </div>
+      <div class="col">
+        <label for="inputEmail1" class="form-label">Email</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputEmail1"
+          ng-model="config.Email"
+        />
+      </div>
+    </div>
+    <button class="btn btn-primary btn-sm" ng-click="saveSettings(setting)">
+      Save
+    </button>
+  </form>
+</div>

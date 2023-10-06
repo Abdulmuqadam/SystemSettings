@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mEMmctF6hCSXFNsZRNUPIpx9V6yuB9ezZ9ERSB34ntJ+ehiZ08v64TuxqWQzqyoCmpSqVHib0B98hiJ7Y30l3g==",
+  "dgSpecHash": "f2zkFOGLIjKf245qYcVvSFGWgki8ExXxPcHAH1HDcxXSGdQYWD70X65qO4V5GrPJC5klVRHTheRx+qFSo3OtdA==",
   "success": true,
-  "projectFilePath": "F:\\Complete Web development turtorial\\csharp\\SystemSetting Module\\SystemSetting\\SystemSetting.csproj",
+  "projectFilePath": "F:\\Complete Web development turtorial\\csharp\\SystemSetting Module\\SystemSettings\\SystemSetting\\SystemSetting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdul\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\abdul\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -57,7 +57,7 @@ namespace SystemSetting.Controllers
 
 
         [HttpPost]
-        public ActionResult<SystemSettings> CreateSystemSettings([FromQuery] SystemSettings settings)
+        public ActionResult<SystemSettings> CreateSystemSettings([FromBody] SystemSettings settings)
         {
             if (settings == null)
             {
@@ -80,7 +80,7 @@ namespace SystemSetting.Controllers
 
 
         [HttpPut("Configuration/{id}/{reference}")]
-        public ActionResult<SystemSettings> UpdateConfiguration(long id, string reference, string configuration)
+        public ActionResult<SystemSettings> UpdateConfiguration(long id, string reference, [FromBody] string configuration)
         {
             var systemSettings = _context.SystemSettings.FirstOrDefault(x => x.Reference == reference && x.Id == id);
 
