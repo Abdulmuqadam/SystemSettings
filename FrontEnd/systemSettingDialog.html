@@ -1,5 +1,67 @@
-<div class="container">
+<div class="container my-5">
   <form>
+    <h4>Main Settings</h4>
+    <div class="row g-3">
+      <div class="col">
+        <label for="input1" class="form-label">Company Id</label>
+        <input
+          type="number"
+          class="form-control"
+          id="input1"
+          ng-model="setting.companyId"
+        />
+      </div>
+      <div class="col">
+        <label for="input2" class="form-label">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="input2"
+          ng-model="setting.description"
+        />
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col">
+        <label for="input3" class="form-label">Type</label>
+        <input
+          type="text"
+          class="form-control"
+          id="input3"
+          ng-model="setting.type"
+        />
+      </div>
+      <div class="col">
+        <label for="input4" class="form-label">Reference</label>
+        <input
+          type="text"
+          class="form-control"
+          id="input4"
+          ng-model="setting.reference"
+        />
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col">
+        <label for="input7" class="form-label">Updated By</label>
+        <input
+          type="text"
+          class="form-control"
+          id="input7"
+          ng-model="setting.updatedBy"
+        />
+      </div>
+      <div class="col">
+        <label for="input6" class="form-label">Created By</label>
+        <input
+          type="text"
+          class="form-control"
+          id="input6"
+          ng-model="setting.createdBy"
+        />
+      </div>
+    </div>
+    <h4 class="my-3">Configurations</h4>
     <div class="row g-3">
       <div class="col">
         <label for="inputEmail4" class="form-label">Name</label>

@@ -10,18 +10,16 @@ function TestController($scope, TestService) {
     Email: "",
   };
 
-  const date = new Date();
-
   $scope.setting = {
     companyId: "",
     description: "",
     type: "",
     reference: "",
-    configuration: $scope.config,
+    configuration: function () {
+      return JSON.stringify($scope.config);
+    },
     createdBy: "",
-    createdOn: date.toLocaleTimeString(),
     updatedBy: "",
-    updatedOn: "",
   };
 
   $scope.ref = $scope.setting.reference;
@@ -65,6 +63,7 @@ function TestController($scope, TestService) {
   };
 
   $scope.saveSettings = function (setting) {
+    debugger;
     TestService.postSetting(setting).then(
       function (response) {
         $scope.status = response.data.status;
@@ -78,6 +77,7 @@ function TestController($scope, TestService) {
   };
 
   $scope.updateConfig = function (id, reference, data) {
+    debugger;
     TestService.updateConfig(id, reference, data).then(
       function (response) {
         console.log(response);

@@ -32,37 +32,35 @@ function TestService($http) {
   }
 
   function postSetting(data) {
-    var query = {
-      CompanyId: data.companyId,
-      Description: data.description,
-      Type: data.type,
-      Reference: data.reference,
-      Configuration: data.configuration,
-      CreatedOn: data.createdOn,
-      CreatedBy: data.createdBy,
-      UpdatedOn: data.createdOn,
-      UpdatedBy: data.updatedOn,
+    debugger;
+    const formattedData = {
+      companyId: data.companyId,
+      description: data.description,
+      type: data.type,
+      reference: data.reference,
+      configuration: data.configuration(),
+      createdOn: new Date().toISOString(),
+      createdBy: data.createdBy,
+      updatedOn: new Date().toISOString(),
+      updatedBy: data.updatedBy,
     };
-    return $http.post("https://localhost:7118/api/SystemSetting?", null, {
-      params: query,
-      headers: { "Content-Type": "application/json;charset=utf-8" },
-    });
-    // ?CompanyId=122&Description=asda&Type=asda&Reference=asd&Configuration=asdaas&CreatedOn=0001-01-01%2000%3A00%3A00.0000000&CreatedBy=asdas&UpdatedOn=0001-01-01%2000%3A00%3A00.0000000&UpdatedBy=dasd
+
+    const formattedDataJSON = JSON.stringify(formattedData);
+
+    return $http.post(
+      "https://localhost:7118/api/SystemSetting",
+      formattedDataJSON
+    );
   }
 
   function updateConfig(id, reference, data) {
-    var config = { Configuration: JSON.stringify(data) };
-
+    debugger;
     return $http.put(
       "https://localhost:7118/api/SystemSetting/Configuration/" +
         id +
         "/" +
         reference,
-      null,
-      {
-        params: config,
-        headers: { "Content-Type": "application/json;charset=utf-8" },
-      }
+      data
     );
   }
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 using SystemSetting.Data;
 using SystemSetting.Models;
 
@@ -80,7 +81,7 @@ namespace SystemSetting.Controllers
 
 
         [HttpPut("Configuration/{id}/{reference}")]
-        public ActionResult<SystemSettings> UpdateConfiguration(long id, string reference, [FromBody] string configuration)
+        public ActionResult<SystemSettings> UpdateConfiguration(long id, string reference, [FromBody] ConfigurationData configuration)
         {
             var systemSettings = _context.SystemSettings.FirstOrDefault(x => x.Reference == reference && x.Id == id);
 
@@ -88,8 +89,10 @@ namespace SystemSetting.Controllers
             {
                 return NotFound();
             }
+            
+            var configurationJson = JsonSerializer.Serialize(configuration);
 
-            systemSettings.Configuration = configuration;
+            systemSettings.Configuration = configurationJson;
 
             try
             {
