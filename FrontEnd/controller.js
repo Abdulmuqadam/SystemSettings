@@ -23,7 +23,7 @@ function TestController($scope, TestService) {
   };
 
   $scope.ref = $scope.setting.reference;
-  $scope.Id = $scope.setting.id;
+  $scope.Id = $scope.setting.id;  
 
   $scope.init = function () {
     TestService.getData().then(

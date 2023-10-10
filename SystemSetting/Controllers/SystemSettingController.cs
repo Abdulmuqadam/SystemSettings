@@ -23,16 +23,21 @@ namespace SystemSetting.Controllers
         }
 
         [HttpGet("{Id}")]
-        public ActionResult<SystemSettings> GetSystemSettingsById(long Id)
+        public async Task<ActionResult<SystemSettings>> GetSystemSettingsById(long Id)
         {
-            if (_context.SystemSettings == null)
+            if (Id <= 0)
             {
-                return BadRequest("No SystemSettings data available.");
+                return BadRequest("Invalid Id. Please provide a valid SystemSettings Id.");
             }
 
-            var data = _context.SystemSettings.Find(Id);
+            var systemSettings = await _context.SystemSettings.FindAsync(Id);
 
-            return Ok(data);
+            if (systemSettings == null)
+            {
+                return NotFound("SystemSettings not found.");
+            }
+
+            return Ok(systemSettings);
         }
 
 
