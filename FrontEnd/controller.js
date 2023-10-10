@@ -63,7 +63,6 @@ function TestController($scope, TestService) {
   };
 
   $scope.saveSettings = function (setting) {
-    debugger;
     TestService.postSetting(setting).then(
       function (response) {
         $scope.status = response.data.status;
@@ -77,7 +76,6 @@ function TestController($scope, TestService) {
   };
 
   $scope.updateConfig = function (id, reference, data) {
-    debugger;
     TestService.updateConfig(id, reference, data).then(
       function (response) {
         console.log(response);

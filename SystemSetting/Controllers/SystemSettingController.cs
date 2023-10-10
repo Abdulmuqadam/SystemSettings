@@ -89,7 +89,7 @@ namespace SystemSetting.Controllers
             {
                 return NotFound();
             }
-            
+
             var configurationJson = JsonSerializer.Serialize(configuration);
 
             systemSettings.Configuration = configurationJson;

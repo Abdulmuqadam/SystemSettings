@@ -32,7 +32,6 @@ function TestService($http) {
   }
 
   function postSetting(data) {
-    debugger;
     const formattedData = {
       companyId: data.companyId,
       description: data.description,
@@ -54,7 +53,6 @@ function TestService($http) {
   }
 
   function updateConfig(id, reference, data) {
-    debugger;
     return $http.put(
       "https://localhost:7118/api/SystemSetting/Configuration/" +
         id +
