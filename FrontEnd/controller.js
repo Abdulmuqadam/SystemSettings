@@ -23,7 +23,7 @@ function TestController($scope, TestService) {
   };
 
   $scope.ref = $scope.setting.reference;
-  $scope.Id = $scope.setting.id;  
+  $scope.Id = $scope.setting.id;
 
   $scope.init = function () {
     TestService.getData().then(
@@ -67,7 +67,7 @@ function TestController($scope, TestService) {
       function (response) {
         $scope.status = response.data.status;
         console.log("Saved");
-        location.reload();
+        window.location.replace("/");
       },
       function (error) {
         console.error(error.status);
